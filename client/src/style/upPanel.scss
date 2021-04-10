@@ -1,0 +1,59 @@
+@import './const.scss';
+.toolBar{
+    height:$upPanelHeight;
+    background-color:white;
+    display:flex;
+    align-items:center;
+    position:absolute;
+    width:100%;
+    justify-content:space-around;
+    box-shadow: 0 4px 5px gray;
+    &__oneGroup{
+        margin-left:10px
+    }
+    &__btn{
+        height:30px;
+        width:30px;
+        border:none;
+        outline:none;
+        cursor:pointer;
+        background-size:cover;
+        margin-left:5px
+    }
+    .brush{
+        background:url('../img/brush.png') no-repeat center
+    }
+    .line{
+        background:url('../img/line.png') no-repeat center
+    }
+    .circle{
+        background:url('../img/circle.png') no-repeat center
+    }
+    .squer{
+        background:url('../img/squer.png') no-repeat center
+    }
+    .eraeser{
+        background:url('../img/eraeser.png') no-repeat center
+    }
+    
+    .back{
+        background:url('../img/back.png') no-repeat center
+    }
+    .next{
+        background:url('../img/next.png') no-repeat center
+    }
+    .save{
+        background:url('../img/save.png') no-repeat center
+    }
+    
+}
+.setBar{
+    height:$upPanelHeight;
+    background-color:white;
+    display:flex;
+    align-items:center;
+    position:absolute;
+    width:100%;
+    box-shadow: 0 4px 5px gray;
+    top:$upPanelHeight + 5;
+}
