@@ -47,13 +47,3 @@
     }
     
 }
-.setBar{
-    height:$upPanelHeight;
-    background-color:white;
-    display:flex;
-    align-items:center;
-    position:absolute;
-    width:100%;
-    box-shadow: 0 4px 5px gray;
-    top:$upPanelHeight + 5;
-}
