@@ -25,8 +25,8 @@ const ToolBar = () => {
                 <input style={{ margin: '0 10px' }} id='lineWidth' type='number' min={1} max={50} defaultValue={1} onChange={e => toolsState.setLineWidth(e.target.value)} />
             </div>
             <div>
-                <button className='toolBar__btn back'></button>
-                <button className='toolBar__btn next'></button>
+                <button className='toolBar__btn back' onClick={()=>canvasState.created()}></button>
+                <button className='toolBar__btn next' onClick={()=>canvasState.canceled()}></button>
                 <button className='toolBar__btn save'></button>
             </div>
         </div>

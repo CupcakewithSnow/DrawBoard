@@ -10,9 +10,12 @@ const Canvas = observer(() => {
         canvasState.setCanvas(canvasRef.current)
         toolState.setTool(new Brush(canvasRef.current))
     },[])
+    const mouseDHandler = ()=>{
+        canvasState.pushToCreated(canvasRef.current.toDataURL())
+    }
     return (
         <div className='canvas'>
-            <canvas ref={canvasRef} width={800} height={600}/>
+            <canvas onMouseDown = {()=>mouseDHandler()} ref={canvasRef} width={800} height={600}/>
         </div>
     )
 }) 
