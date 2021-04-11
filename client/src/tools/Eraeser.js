@@ -24,7 +24,6 @@ export default class Eraeser extends Tool {
     }
     draw(x, y) {
         this.ctx.strokeStyle = "white"
-        this.ctx.lineWidth = 20
         this.ctx.lineTo(x, y)
         this.ctx.stroke()
 

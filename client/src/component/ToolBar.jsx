@@ -16,10 +16,12 @@ const ToolBar = () => {
                 <button className='toolBar__btn circle' onClick={()=>toolState.setTool(new Circle(canvasState.canvas))}></button>
                 <button className='toolBar__btn squer' onClick={()=>toolState.setTool(new Quere(canvasState.canvas))}></button>
                 <button className='toolBar__btn eraeser' onClick={()=>toolState.setTool(new Eraeser(canvasState.canvas))}></button>
-                <input type='color' style={{marginLeft:10}}></input>
+                <input type='color' style={{marginLeft:10}}
+                onChange = {(e)=>toolState.setStrokColor(e.target.value)}
+                ></input>
             </div>
             <div>
-                <button className='toolBar__btn back'></button>
+                <button className='toolBar__btn back'></button> 
                 <button className='toolBar__btn next'></button>
                 <button className='toolBar__btn save'></button>
             </div>

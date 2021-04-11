@@ -3,6 +3,12 @@ export default class Tool {
         this.canvas = canvas
         this.ctx = canvas.getContext('2d')
     }
+    set strokeColor(color){
+        this.ctx.strokeStyle = color
+    }
+    set lineWidth(width){
+        this.ctx.lineWidth = width
+    }
     deletEvents() {
         this.canvas.onmousemove = null
         this.canvas.onmouseup = null

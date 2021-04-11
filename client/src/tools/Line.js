@@ -40,8 +40,8 @@ export default class Line extends Tool {
             this.ctx.beginPath()
             this.ctx.moveTo(x,y)
             this.ctx.lineTo(x0,y0)
-            this.ctx.strokeStyle = "black"
-            this.ctx.lineWidth = 2
+            
+            
             this.ctx.stroke()
         }
     }

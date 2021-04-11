@@ -2,6 +2,8 @@ import { makeAutoObservable } from "mobx";
 
 class CanvasState {
     canvas = null
+    createdList = []
+    canceledList = []
     constructor() {
         makeAutoObservable(this)
     }
