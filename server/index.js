@@ -1,10 +1,8 @@
 require('dotenv').config()
-const { json } = require('express')
+
 const express = require('express')
 PORT = process.env.PORT || 5000
 const app = express()
-
-
 const WSserver = require('express-ws')(app)
 const aWss = WSserver.getWss()
 app.ws('/', (ws, req) => {
@@ -16,6 +14,9 @@ app.ws('/', (ws, req) => {
             case 'connection':
                 connectionHandler(ws, msg)
                 break
+            case 'draw':
+                annunceator(ws,msg)
+                break
         }
     })
 })
@@ -26,9 +27,9 @@ const connectionHandler = (ws, msg) => {
     annunceator(ws, msg)
 }
 const annunceator = (ws, msg) => {
-    aWss.clients.forEach(cl => {
+    aWss.clients.forEach(cl => { 
         if (cl.id = msg.id) {
-            cl.send(`User ${msg.name} connection `)
+            cl.send(JSON.stringify(msg))
         }
     })
 }

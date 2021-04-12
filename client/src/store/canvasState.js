@@ -4,12 +4,24 @@ class CanvasState {
     canvas = null
     createdList = []
     canceledList = []
+    socket = null
+    sessionId = null
+    userName = ''
     constructor() {
         makeAutoObservable(this)
     }
 
     setCanvas(canvas) {
         this.canvas = canvas
+    }
+    setSoket(socket) {
+        this.socket = socket
+    }
+    setSessionId(id) {
+        this.sessionId = id
+    }
+    setUser(user){
+        this.userName = user
     }
 
     pushToCreated(data) {
